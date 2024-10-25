@@ -5,6 +5,7 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (By.CSS_SELECTOR, '.btn-group > a:nth-child(1)')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class MainPageLocators():
@@ -14,6 +15,12 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = (By.ID, 'login_form')
     REGISTER_FORM = (By.ID, 'register_form')
+    REGISTERATION_EMAIL_FIELD = (By.ID, 'id_registration-email')
+    REGISTRATION_PASSWORD_FIELD_1 = (By.ID, 'id_registration-password1')
+    REGISTRATION_PASSWORD_FIELD_2 = (By.ID, 'id_registration-password2')
+    REGISTRATION_SUBMIT_BUTTON = (
+        By.CSS_SELECTOR, '#register_form > button:nth-child(7)'
+    )
 
 
 class ProductPageLocators():
@@ -21,7 +28,8 @@ class ProductPageLocators():
         By.CSS_SELECTOR, 'button.btn-add-to-basket'
     )
     SUCCESS_MESSAGE = (
-        By.CSS_SELECTOR, 'div.alert:nth-child(1)')
+        By.CSS_SELECTOR, 'div.alert:nth-child(1)'
+    )
     CART_PRICE = (
         By.CSS_SELECTOR, 'div.alert:nth-child(3) > div:nth-child(2) > p:nth-child(1) > strong:nth-child(1)'
     )
@@ -42,7 +50,4 @@ class BasketPageLocators():
     )
     MESSAGE_BASKET_IS_EMPTY = (
         By.CSS_SELECTOR, '#content_inner > p:nth-child(1)'
-    )
-    MESSAGE_BASKET_IS_EMPTY = (
-        By.CSS_SELECTOR, '#content_inner > p:nth-child(12)'
     )
